@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   context: __dirname,
-  entry: './js/ClientApp.js',
+  entry: './js/ClientApp3.js',
   devtool: 'cheap-module-source-map',
   output: {
     path: path.join(__dirname, '/public'),
@@ -19,7 +19,7 @@ module.exports = {
   stats: {
     colors: true,
     reasons: true,
-    chunks: false
+    chunks: true
   },
   devServer: {
     publicPath: '/public/',
@@ -28,9 +28,9 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js$/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
         exclude: /node_modules/
       },
       {
